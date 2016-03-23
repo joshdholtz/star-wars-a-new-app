@@ -11,18 +11,49 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+	
+	var films: [FilmModel]?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		let getFilms = GetFilms()
+		getFilms.request { (object) -> () in
+			
+		}
+		
+		Film.Films.request { [weak self] (object) -> () in
+			guard let object = object as? [String: AnyObject] else {
+				return
+			}
+			let results = object["results"]
+			self?.films = Mapper<FilmModel>().mapArray(results)
+			self?.tableView.reloadData()
+		}
+		
+		
 	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
 	}
-
+	
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return films?.count ?? 0
+	}
+	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		
+		guard let cell = tableView.dequeueReusableCellWithIdentifier("FilmCell", forIndexPath: indexPath) as? FilmCell else {
+			fatalError("THIS SHOULD NEVER HAPPEN")
+		}
+		
+		let film = films?[indexPath.row]
+		
+		cell.lblTitle.text = film?.title ?? "no title dude"
+		return cell
+	}
 
 }
 

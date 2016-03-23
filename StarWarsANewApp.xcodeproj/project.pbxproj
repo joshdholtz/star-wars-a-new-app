@@ -14,6 +14,9 @@
 		03D4D9E31CA304C400799CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D4D9E11CA304C400799CC9 /* LaunchScreen.storyboard */; };
 		03D4D9EC1CA307BC00799CC9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D4D9EA1CA307B100799CC9 /* Alamofire.framework */; };
 		03D4D9ED1CA307BC00799CC9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D4D9EA1CA307B100799CC9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03D4D9F11CA30A0200799CC9 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4D9F01CA30A0200799CC9 /* Endpoint.swift */; };
+		03D4D9F31CA30DE500799CC9 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4D9F21CA30DE500799CC9 /* FilmModel.swift */; };
+		03D4D9F51CA3104500799CC9 /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4D9F41CA3104500799CC9 /* FilmCell.swift */; };
 		E92324CE2F7422DEF0E27D7C /* Pods_StarWarsANewApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FD5464A1FC7BA46411D2D3 /* Pods_StarWarsANewApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		03D4D9E21CA304C400799CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03D4D9E41CA304C400799CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03D4D9EA1CA307B100799CC9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		03D4D9F01CA30A0200799CC9 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		03D4D9F21CA30DE500799CC9 /* FilmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		03D4D9F41CA3104500799CC9 /* FilmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		2BAB4FB78D1F409D4EF9089D /* Pods-StarWarsANewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsANewApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsANewApp/Pods-StarWarsANewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		78FD5464A1FC7BA46411D2D3 /* Pods_StarWarsANewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsANewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95372147C9F628D004419597 /* Pods-StarWarsANewApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsANewApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsANewApp/Pods-StarWarsANewApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +92,9 @@
 				03D4D9DF1CA304C400799CC9 /* Assets.xcassets */,
 				03D4D9E11CA304C400799CC9 /* LaunchScreen.storyboard */,
 				03D4D9E41CA304C400799CC9 /* Info.plist */,
+				03D4D9F01CA30A0200799CC9 /* Endpoint.swift */,
+				03D4D9F21CA30DE500799CC9 /* FilmModel.swift */,
+				03D4D9F41CA3104500799CC9 /* FilmCell.swift */,
 			);
 			path = StarWarsANewApp;
 			sourceTree = "<group>";
@@ -246,7 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D4D9DB1CA304C400799CC9 /* ViewController.swift in Sources */,
+				03D4D9F11CA30A0200799CC9 /* Endpoint.swift in Sources */,
 				03D4D9D91CA304C400799CC9 /* AppDelegate.swift in Sources */,
+				03D4D9F31CA30DE500799CC9 /* FilmModel.swift in Sources */,
+				03D4D9F51CA3104500799CC9 /* FilmCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
